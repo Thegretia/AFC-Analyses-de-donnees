@@ -99,7 +99,7 @@ eig_summary = pd.DataFrame({
 })
 
 # ---------- Sauvegarde résultats dans Excel ----------
-with pd.ExcelWriter("results_CA3.xlsx") as writer:
+with pd.ExcelWriter("results_CA2.xlsx") as writer:
     cont.to_excel(writer, sheet_name="contingency")
     P.to_excel(writer, sheet_name="frequencies")
     pd.DataFrame(r.flatten(), index=cont.index, columns=["mass_r"]).to_excel(writer, sheet_name="masses")
@@ -111,7 +111,7 @@ with pd.ExcelWriter("results_CA3.xlsx") as writer:
     col_contrib.to_excel(writer, sheet_name="col_contrib_%")
     eig_summary.to_excel(writer, sheet_name="eig_summary")
 
-print("Fichier results_CA.xlsx créé avec tous les tableaux.") #message de confirmation d'aucune erreur 
+print("Fichier results_CA2.xlsx créé avec tous les tableaux.") #message de confirmation d'aucune erreur 
 
 # ---------- Graphiques ----------
 # 1) Biplot (Dim1 x Dim2)
@@ -169,4 +169,5 @@ for k in range(K):
     plt.show()
 
 print("Graphiques sauvegardés: CA_biplot.png, row_cos2.png, col_cos2.png, row_contrib_dim*.png, col_contrib_dim*.png") #message pour dire a fait part de la disponibilite des images a l'user 
+
 
