@@ -3,13 +3,14 @@ import pandas as pd
 import numpy as np
 from scipy.linalg import svd
 import matplotlib.pyplot as plt
+import fanalysis as CA
 
 # ---------- Configuration ----------
-INPUT_FILE = "Bilan Financier.xlsx"   # adapte le nom / chemin
-SHEET = 0                              # index ou nom de feuille
+INPUT_FILE = "Bilan Financier.xlsx"   
+SHEET = 0                              # index de la feuille
 ROW_VAR = "Product"
 COL_VAR = "Segment"
-N_COMPONENTS = 2                       # axes à conserver
+N_COMPONENTS = 2                       # axe
 
 # ---------- Charger données et construire tableau de contingence ----------
 df = pd.read_excel(INPUT_FILE, sheet_name=SHEET)
@@ -27,7 +28,7 @@ r = P.sum(axis=1).values.reshape(-1,1)   # masses lignes (I x 1)
 c = P.sum(axis=0).values.reshape(1,-1)   # masses colonnes (1 x J)
 
 # Matrice des profils
-# profils ligne p_ij / r_i (déjà utile)
+# profils ligne p_ij / r_i 
 profiles_line = P.div(r.flatten(), axis=0)   # DataFrame
 profiles_col = P.div(c.flatten(), axis=1)    # DataFrame
 
@@ -110,7 +111,7 @@ with pd.ExcelWriter("results_CA3.xlsx") as writer:
     col_contrib.to_excel(writer, sheet_name="col_contrib_%")
     eig_summary.to_excel(writer, sheet_name="eig_summary")
 
-print("Fichier results_CA.xlsx créé avec tous les tableaux.")
+print("Fichier results_CA.xlsx créé avec tous les tableaux.") #message de confirmation d'aucune erreur 
 
 # ---------- Graphiques ----------
 # 1) Biplot (Dim1 x Dim2)
@@ -167,4 +168,5 @@ for k in range(K):
     plt.savefig(f"col_contrib_dim{k+1}.png", dpi=150)
     plt.show()
 
-print("Graphiques sauvegardés: CA_biplot.png, row_cos2.png, col_cos2.png, row_contrib_dim*.png, col_contrib_dim*.png")
+print("Graphiques sauvegardés: CA_biplot.png, row_cos2.png, col_cos2.png, row_contrib_dim*.png, col_contrib_dim*.png") #message pour dire a fait part de la disponibilite des images a l'user 
+
