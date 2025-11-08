@@ -19,8 +19,10 @@ Python version: 3.8.5
 
 Libraries:pandas, numpy, matplotlib
 
+Excel: used for complementary visualization and manual verification
+
 --------------------
 By Patrick ETIA
 
 
-Excel: used for complementary visualization and manual verification
+
