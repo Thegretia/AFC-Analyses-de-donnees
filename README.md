@@ -12,12 +12,12 @@ It aims to **graphically represent the relationships between rows and columns** 
 - Understand *the distribution of segments* across different *countries* in the company’s sales data.
 - Compute *row and column profiles*, their *inertias*, and *contributions*.
 - Graphically represent the *factorial axes* to interpret the proximities and oppositions between categories.
-- Implement the method both in Excel and in Python (using library).
+- Implement the method both in Excel and in Python (using fanalysis library).
 
 ## Tools Used
 Python version: 3.8.5
 
-Libraries:pandas, numpy, matplotlib
+Libraries:pandas, numpy, matplotlib , fanalysis
 
 Excel: used for complementary visualization and manual verification
 
