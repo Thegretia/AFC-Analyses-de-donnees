@@ -1,19 +1,26 @@
-# Projet d'Analyse Factorielle des Correspondances (AFC)
+# Correspondence Analysis (CA) Project
 
-Ce projet applique une **Analyse Factorielle des Correspondaces** sur un jeu de données d'entreprise intitulé *"Financial Sample"* aifn d'identifier les relations et correspondances entre deux variables qualitatives; dans notre cas c'est *le segment de marche* (segment) et le *pays* (country).
+This project applies a **Correspondence Analysis (CA)** on a business dataset called *"Financial Sample"* in order to identify relationships and correspondences between two qualitative variables; in our case *market segment* (segment) et *country* (country).
 
-## C'est quoi l'AFC 
+## What is Correspondence Analysis (CA)?
 
-L'AFC est une methode statitistique exploratoire permettant d'analyser la structure d'un tableau de contingence. Elle cherche à *representer graphiquement les relations entre les lignes et les colonnes* d'un tableau de données qualitatives en reduisant la dimension tout en conservant le maximum d'information possible 
+Correspondence Analysis is an **exploratory statistical** method used to analyze the structure of a contingency table.
+It aims to **graphically represent the relationships between rows and columns** of a qualitative dataset by reducing its dimensionality while preserving as much information as possible. 
 
-## Objectifs du projet 
+## Project Objectives 
 
-- Comprendre la **distribution des segments** selon les **pays** dans les ventes de l’entreprise.  
-- Calculer les **profils lignes et colonnes**, leurs **inerties** et **contributions**.  
-- Représenter graphiquement les **axes factoriels** afin d’interpréter les proximités et oppositions entre les modalités.
-- Mettre en œuvre la méthode à la fois **sous Excel** et **en Python** (avec la bibliothèque `fanalysis`).
+- Understand *the distribution of segments* across different *countries* in the company’s sales data.
+- Compute *row and column profiles*, their *inertias*, and *contributions*.
+- Graphically represent the *factorial axes* to interpret the proximities and oppositions between categories.
+- Implement the method both in Excel and in Python (using library).
 
-## Outils utilisés
-- Python 3.8.5
-- bibliothèques : pandas, fanalysis, numpy, matplotlib
-- Excel (visualisation complémentaire)
+## Tools Used
+Python version: 3.8.5
+
+Libraries:pandas, numpy, matplotlib
+
+--------------------
+By Patrick ETIA
+
+
+Excel: used for complementary visualization and manual verification
